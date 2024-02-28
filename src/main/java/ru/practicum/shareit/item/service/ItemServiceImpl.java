@@ -29,7 +29,7 @@ public class ItemServiceImpl implements ItemService {
     public Item updateItem(Long userId, Item item, Long itemId) {
         if (!userId.equals(getItemById(itemId).getId())) {
             if (!(item.getAvailable() != null && item.getName() == null))
-                throw new NotFoundException("User not a owner");
+                throw new NotFoundException("User not  a owner");
         }
         var i = itemRepository.updateItem(item, itemId);
         log.info("Successfully update item with id: {}", i.getId());
