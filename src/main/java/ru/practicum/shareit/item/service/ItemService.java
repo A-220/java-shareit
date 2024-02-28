@@ -4,15 +4,15 @@ import ru.practicum.shareit.item.model.Item;
 
 import java.util.List;
 
- public interface ItemService {
+public interface ItemService {
 
-     Item addItem(Long ownerId, Item item);
+    Item addItem(Long ownerId, Item item);
 
-     Item updateItem(Long userId, Item item, Long itemId);
+    Item updateItem(Long userId, Item item, Long itemId);
 
-     Item getItemById(Long itemId);
+    Item getItemById(Long itemId);
 
-     List<Item> getAllItems(Long userId);
+    List<Item> getAllItems(Long userId);
 
-     List<Item> getItemsByText(String text);
+    List<Item> getItemsByText(String text);
 }
