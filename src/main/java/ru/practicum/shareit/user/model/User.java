@@ -12,11 +12,11 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode
 public class User {
 
-    Long id;
+    private Long id;
 
-    String name;
+    private String name;
 
     @Email
     @NotNull
-    String email;
+    private String email;
 }

@@ -46,8 +46,6 @@ public class ItemController {
 
     @GetMapping
     public List<ItemDto> getAllItems(@RequestHeader(value = X_SHARER_USER_ID) Long userId) {
-        // стоит ли эту логику вынести в отдельный компонент
-        // или такое дублирование кода не срашно?
         return itemService.getAllItems(userId).stream()
                 .map(ItemDto::toDto)
                 .collect(Collectors.toList());
